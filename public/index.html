@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic-tac-toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAmoaAoi9P3MjFaK9VtaH2K0LpWnOkbE5I",
+          authDomain: "bangtan-tic-tac-toe.firebaseapp.com",
+          projectId: "bangtan-tic-tac-toe",
+          storageBucket: "bangtan-tic-tac-toe.appspot.com",
+          messagingSenderId: "886570757962",
+          appId: "1:886570757962:web:f6f376f6f3c15b456d9bb3",
+          measurementId: "G-M6Z0852NFG"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</head>
+<body>
+    <div class="backgroundanimate">
+        <div class="ani X x1"></div>
+        <div class="ani o o1"></div>
+        <div class="ani X x2"></div>
+        <div class="ani o o2"></div>
+        <div class="ani X x3"></div>
+        <div class="ani o o3"></div>
+        <div class="ani X x4"></div>
+        <div class="ani o o4"></div>
+    </div>
+    <div class="board"  id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+    </div>
+    <div class="winning-message" id="winningMessage">
+        <div data-winning-message-text></div>
+        <button id="restartButton">RESTART</button>
+    </div>
+</body>
+</html>
